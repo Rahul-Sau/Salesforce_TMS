@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Batch_Count__c</fullName>
+    <description>Number of batches scheduled for this course. Roll-up of Course Batches.</description>
+    <inlineHelpText>ounts all batches under this course.</inlineHelpText>
+    <label>Batch Count</label>
+    <summaryForeignKey>Course_Batch__c.Course__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>
