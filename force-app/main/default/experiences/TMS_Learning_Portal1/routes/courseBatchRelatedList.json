@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "70542b5d-3f3d-4b15-8c0e-57e8b35c1358",
+  "appPageId" : "b0129135-173a-4792-b117-8d3cfc066708",
+  "configurationTags" : [ ],
+  "devName" : "Course_Batch_Related_List__c",
+  "id" : "9493fed7-5769-4ad7-99cc-9e5fc88827f1",
+  "label" : "Course Batch Related List",
+  "objectApiName" : "Course_Batch__c",
+  "routeType" : "relatedlist-a01",
+  "type" : "route",
+  "urlPrefix" : "course-batch"
+}

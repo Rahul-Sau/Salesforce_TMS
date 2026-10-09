@@ -7,4 +7,12 @@
         <shortDescription>TMS Verify Base URL</shortDescription>
         <value>https://example.com/verify?code=</value>
     </labels>
+    <labels>
+        <fullName>TMS_Admin_Email</fullName>
+        <categories>TMS</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>TMS Admin Email</shortDescription>
+        <value>rahulshaw2203@gmail.com</value>
+    </labels>
 </CustomLabels>

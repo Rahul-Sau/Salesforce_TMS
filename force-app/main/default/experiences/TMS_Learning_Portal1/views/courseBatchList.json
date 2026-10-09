@@ -1,0 +1,46 @@
+{
+  "appPageId" : "b0129135-173a-4792-b117-8d3cfc066708",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "36d297ed-2ea6-4e4f-ba8c-88d90c2dfcea",
+  "label" : "Course Batch List",
+  "regions" : [ {
+    "id" : "c6975121-7886-438c-a61a-252d0b663d04",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "enableInlineEdit" : true,
+        "filterName" : "{!filterId}",
+        "layout" : "FULL",
+        "pageSize" : 25,
+        "scope" : "{!objectName}",
+        "showActionBar" : true,
+        "showChartsPanel" : true,
+        "showDisplay" : "showall",
+        "showFilterPanel" : true,
+        "showImageIcon" : true,
+        "showManualRefreshButton" : true,
+        "showObjectName" : true,
+        "showPinnedList" : true,
+        "showSearchBar" : true
+      },
+      "componentName" : "forceCommunity:objectHome",
+      "id" : "258efddb-08dc-47c0-9cf0-c7bf69fd5ded",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "67f59523-e324-4d16-ab0d-70d51090488c",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "583f92cd-345d-4618-8a49-0d978f6ce2b2",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "list-a01"
+}

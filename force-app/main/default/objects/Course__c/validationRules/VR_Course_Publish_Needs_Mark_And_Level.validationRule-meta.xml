@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Course_Publish_Needs_Mark_And_Level</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Status__c,&apos;Published&apos;), OR(ISBLANK(Pass_Mark__c), ISPICKVAL(Level__c,&apos;&apos;)))</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>A course needs a pass mark and a level before it can be published.</errorMessage>
+</ValidationRule>

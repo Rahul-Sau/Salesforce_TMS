@@ -10,10 +10,6 @@
     </customPermissions>
     <customPermissions>
         <enabled>true</enabled>
-        <name>TMS_Bypass_Validation</name>
-    </customPermissions>
-    <customPermissions>
-        <enabled>true</enabled>
         <name>TMS_Create_Course</name>
     </customPermissions>
     <customPermissions>

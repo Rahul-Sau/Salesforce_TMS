@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Enrollment_Batch_Must_Be_Open</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISNEW(), NOT(Course_Batch__r.Is_Open_For_Enrollment__c), NOT($Permission.TMS_Bypass_Validation))</errorConditionFormula>
+    <errorMessage>This batch is not open for enrollment.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Batch_Weightage_Must_Be_100</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(ISNEW(), ISCHANGED(Status__c)), ISPICKVAL(Status__c,&apos;In Progress&apos;), BLANKVALUE(Total_Weightage__c,0) &lt;&gt; 100)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>Published assessment weightage must total 100 before the batch starts.</errorMessage>
+</ValidationRule>
