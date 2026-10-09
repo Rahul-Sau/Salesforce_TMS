@@ -24,6 +24,7 @@
     <tabs>standard-Contact</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
+    <tabs>Course_Wizard</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Training_Management_UtilityBar</utilityBar>
 </CustomApplication>

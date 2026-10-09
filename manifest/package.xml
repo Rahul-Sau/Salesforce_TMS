@@ -4,8 +4,48 @@
   <types><members>Contact</members><name>CustomObject</name></types>
   <types><members>*</members><name>CustomApplication</name></types>
   <types><members>*</members><name>CustomTab</name></types>
-  <types><members>*</members><name>CustomMetadata</name></types>
+  <types><members>TMS_Config.Default</members><name>CustomMetadata</name></types>
   <types><members>*</members><name>CustomLabels</name></types>
-  <types><members>*</members><name>Layout</name></types>
+  <types><members>*</members><name>CustomPermission</name></types>
+  <types>
+    <members>TMS_Trainee</members>
+    <members>TMS_Trainer</members>
+    <members>TMS_Manager_Access</members>
+    <name>PermissionSet</name>
+  </types>
+  <types>
+    <members>TMS_Trainee_Group</members>
+    <members>TMS_Trainer_Group</members>
+    <name>PermissionSetGroup</name>
+  </types>
+  <types>
+    <members>TMS Portal User</members>
+    <members>TMS Trainer Portal User</members>
+    <name>Profile</name>
+  </types>
+  <types>
+    <members>TMS_Portal_Access</members>
+    <members>TMS_Portal_Access_Trainer</members>
+    <name>SharingSet</name>
+  </types>
+  <types><members>TMS_Training_Managers</members><name>Queue</name></types>
+  <types><members>TMS_SCR_Course_Create_Wizard</members><name>Flow</name></types>
+  <types><members>*</members><name>FlexiPage</name></types>
+  <types><members>*</members><name>Network</name></types>
+  <types><members>*</members><name>CustomSite</name></types>
+  <types><members>*</members><name>ExperienceBundle</name></types>
+  <types>
+    <members>Contact-Trainer Contact Layout</members>
+    <members>Contact-Contact Layout</members>
+    <members>Course__c-Course Layout</members>
+    <members>Course_Batch__c-Course Batch Layout</members>
+    <members>Enrollment__c-Enrollment Layout</members>
+    <members>Assessment__c-Assessment Layout</members>
+    <members>Submission__c-Submission Layout</members>
+    <members>Certificate__c-Certificate Layout</members>
+    <members>Integration_Log__c-Integration Log Layout</members>
+    <members>TMS_Config__mdt-TMS Config Layout</members>
+    <name>Layout</name>
+  </types>
   <version>67.0</version>
 </Package>

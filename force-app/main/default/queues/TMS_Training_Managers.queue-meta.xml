@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>false</doesIncludeBosses>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>TMS Training Managers</name>
+    <queueMembers>
+        <users>
+            <user>rahulshaw2203.ec5a35df4a23@agentforce.com</user>
+            <user>tms.manager@rahul.tms</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Enrollment__c</sobjectType>
+    </queueSobject>
+</Queue>

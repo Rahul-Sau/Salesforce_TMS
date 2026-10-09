@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>Certificate__c</object>
+        <objectField>Trainee__c</objectField>
+        <userField>Contact</userField>
+    </accessMappings>
+    <accessMappings>
+        <accessLevel>Read</accessLevel>
+        <object>Enrollment__c</object>
+        <objectField>Trainee__c</objectField>
+        <userField>Contact</userField>
+    </accessMappings>
+    <description>Gives portal users access to their own enrollments, assessments and certificates</description>
+    <name>TMS Portal Access</name>
+    <profiles>TMS Portal User</profiles>
+</SharingSet>

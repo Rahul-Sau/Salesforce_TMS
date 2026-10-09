@@ -10,9 +10,9 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Technical,</fullName>
+                <fullName>Technical</fullName>
                 <default>false</default>
-                <label>Technical,</label>
+                <label>Technical</label>
             </value>
             <value>
                 <fullName>Soft Skills</fullName>
