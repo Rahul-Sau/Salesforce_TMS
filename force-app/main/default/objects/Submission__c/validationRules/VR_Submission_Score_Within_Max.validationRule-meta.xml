@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Submission_Score_Within_Max</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT(ISBLANK(Score_Obtained__c)), OR(Score_Obtained__c &lt; 0, Score_Obtained__c &gt; Max_Score_Snapshot__c))</errorConditionFormula>
+    <errorDisplayField>Score_Obtained__c</errorDisplayField>
+    <errorMessage>Score must be between 0 and the maximum score.</errorMessage>
+</ValidationRule>

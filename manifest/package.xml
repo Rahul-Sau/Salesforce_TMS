@@ -8,9 +8,19 @@
   <types><members>*</members><name>CustomLabels</name></types>
   <types><members>*</members><name>CustomPermission</name></types>
   <types>
+    <members>TMS_Constants</members>
+    <members>TMS_SeatAllocationService</members>
+    <members>TMS_EnrollmentTriggerHandler</members>
+    <members>TMS_TestDataFactory</members>
+    <members>TMS_SeatAllocationService_Test</members>
+    <name>ApexClass</name>
+  </types>
+  <types><members>TMS_EnrollmentTrigger</members><name>ApexTrigger</name></types>
+  <types>
     <members>TMS_Trainee</members>
     <members>TMS_Trainer</members>
     <members>TMS_Manager_Access</members>
+    <members>TMS_Bypass_Validation_Access</members>
     <name>PermissionSet</name>
   </types>
   <types>
@@ -29,7 +39,18 @@
     <name>SharingSet</name>
   </types>
   <types><members>TMS_Training_Managers</members><name>Queue</name></types>
-  <types><members>TMS_SCR_Course_Create_Wizard</members><name>Flow</name></types>
+  <types>
+    <members>TMS_SCR_Course_Create_Wizard</members>
+    <members>TMS_Enrollment_RT_BeforeSave_Defaults</members>
+    <members>TMS_SCR_Apply_For_Batch</members>
+    <members>TMS_Enrollment_RT_AfterSave_Orchestrate</members>
+    <members>TMS_Assessment_RT_BeforeSave_Defaults</members>
+    <members>TMS_Assessment_RT_AfterSave_Orchestrate</members>
+    <members>TMS_Submission_RT_BeforeSave_Scoring</members>
+    <members>TMS_SCR_Submit_Assessment</members>
+    <members>TMS_SCR_Withdraw_Enrollment</members>
+    <name>Flow</name>
+  </types>
   <types><members>*</members><name>FlexiPage</name></types>
   <types><members>*</members><name>Network</name></types>
   <types><members>*</members><name>CustomSite</name></types>
@@ -47,5 +68,8 @@
     <members>TMS_Config__mdt-TMS Config Layout</members>
     <name>Layout</name>
   </types>
+  <types><members>Enrollment__c.TMS_Enrollment_Approval</members><name>ApprovalProcess</name></types>
+  <types><members>Enrollment__c.*</members><name>WorkflowFieldUpdate</name></types>
+  <types><members>*</members><name>PathAssistant</name></types>
   <version>67.0</version>
 </Package>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Trainee access bundle</description>
     <hasActivationRequired>false</hasActivationRequired>
     <label>TMS Trainee Group</label>
     <permissionSets>TMS_Trainee</permissionSets>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Assessment_Locked_After_Start</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Course_Batch__r.Status__c,&apos;In Progress&apos;), OR(ISNEW(), ISCHANGED(Weightage__c), ISCHANGED(Max_Score__c)))</errorConditionFormula>
+    <errorMessage>Weightage and score cannot change once the batch has started.</errorMessage>
+</ValidationRule>

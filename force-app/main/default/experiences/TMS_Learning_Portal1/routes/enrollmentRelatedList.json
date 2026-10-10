@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "722106d5-65ff-4d26-84e0-bc2736d56985",
+  "appPageId" : "b0129135-173a-4792-b117-8d3cfc066708",
+  "configurationTags" : [ ],
+  "devName" : "Enrollment_Related_List__c",
+  "id" : "4815bb95-e979-4e29-9fd9-f587f035c92e",
+  "label" : "Enrollment Related List",
+  "objectApiName" : "Enrollment__c",
+  "routeType" : "relatedlist-a02",
+  "type" : "route",
+  "urlPrefix" : "enrollment"
+}

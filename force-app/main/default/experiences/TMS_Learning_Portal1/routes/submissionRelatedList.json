@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "c75dfa60-c518-4a33-a027-6e53897203d1",
+  "appPageId" : "b0129135-173a-4792-b117-8d3cfc066708",
+  "configurationTags" : [ ],
+  "devName" : "Submission_Related_List__c",
+  "id" : "4ee64874-d8e6-442d-a5fc-6b60f54b6390",
+  "label" : "Submission Related List",
+  "objectApiName" : "Submission__c",
+  "routeType" : "relatedlist-a04",
+  "type" : "route",
+  "urlPrefix" : "submission"
+}

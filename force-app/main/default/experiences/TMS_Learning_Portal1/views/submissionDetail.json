@@ -1,0 +1,76 @@
+{
+  "appPageId" : "b0129135-173a-4792-b117-8d3cfc066708",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "4455d419-130c-4944-bcf2-cd3802e29c2b",
+  "label" : "Submission Detail",
+  "regions" : [ {
+    "id" : "f42e2425-040d-43be-9de4-a0c9efceae2d",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "flowArguments" : "[{\"label\":\"recordId\",\"dataType\":\"String\",\"supportsRecordId\":true,\"value\":\"{!Record.Id}\"}]",
+        "flowName" : "TMS_SCR_Submit_Assessment"
+      },
+      "componentName" : "forceCommunity:flowCommunity",
+      "id" : "2e1d7134-7a0f-4653-b8b6-c5a973cc6355",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "recordId" : "{!recordId}"
+      },
+      "componentName" : "forceCommunity:recordHeadline",
+      "id" : "a9296686-af1d-46da-a310-4eb2d4253599",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "detailsTabLabel" : "Details",
+        "discussionsTabLabel" : "Feed",
+        "recordId" : "{!recordId}",
+        "relatedTabLabel" : "Related",
+        "showLegacyActivityComposer" : false,
+        "tab1Type" : "details",
+        "tab2Type" : "related",
+        "tab3Type" : "chatter",
+        "tab4Type" : "none",
+        "timelineTabLabel" : "Activity"
+      },
+      "componentName" : "forceCommunity:recordHomeTabs",
+      "id" : "ad92376b-3666-4bdf-92b3-410a679860e0",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9495fa33-47a7-4977-ab3d-a52fc75994c8",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "cb4fd54a-d1c1-4f8e-9432-a8d54d8771f5",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "03b86d90-5353-4169-b534-11588b1fcaa7",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1aaebdf7-4526-47a9-bfe8-3d71e661735e",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-a04"
+}

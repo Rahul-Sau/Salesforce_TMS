@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Assessment_Weightage_Range</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(Weightage__c &lt; 1, Weightage__c &gt; 100, Max_Score__c &lt;= 0)</errorConditionFormula>
+    <errorDisplayField>Weightage__c</errorDisplayField>
+    <errorMessage>Weightage must be 1 to 100 and max score above 0.</errorMessage>
+</ValidationRule>
