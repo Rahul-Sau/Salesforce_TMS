@@ -30,6 +30,16 @@
       "type" : "component"
     }, {
       "componentAttributes" : {
+        "flowArguments" : "[{\"label\":\"recordId\",\"dataType\":\"String\",\"supportsRecordId\":true,\"value\":\"{!Record.Id}\"}]",
+        "flowName" : "TMS_SCR_Finalize_Batch"
+      },
+      "componentName" : "forceCommunity:flowCommunity",
+      "id" : "e5c7510b-9ed5-4720-9786-a33ed309b6fe",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
         "detailsTabLabel" : "Details",
         "discussionsTabLabel" : "Feed",
         "recordId" : "{!recordId}",

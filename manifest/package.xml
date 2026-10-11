@@ -13,6 +13,9 @@
     <members>TMS_EnrollmentTriggerHandler</members>
     <members>TMS_TestDataFactory</members>
     <members>TMS_SeatAllocationService_Test</members>
+    <members>TMS_CertificateIssueQueueable</members>
+    <members>TMS_CertificateInvocable</members>
+    <members>TMS_CertificateIssueQueueable_Test</members>
     <name>ApexClass</name>
   </types>
   <types><members>TMS_EnrollmentTrigger</members><name>ApexTrigger</name></types>
@@ -49,8 +52,15 @@
     <members>TMS_Submission_RT_BeforeSave_Scoring</members>
     <members>TMS_SCR_Submit_Assessment</members>
     <members>TMS_SCR_Withdraw_Enrollment</members>
+    <members>TMS_Certificate_RT_AfterSave_Verify</members>
+    <members>TMS_SCR_Finalize_Batch</members>
+    <members>TMS_SCH_Submission_Mark_Missed</members>
+    <members>TMS_SCH_Assessment_Due_Reminder</members>
     <name>Flow</name>
   </types>
+  <types><members>TMS_QR_Service</members><name>NamedCredential</name></types>
+  <types><members>*</members><name>ExternalCredential</name></types>
+  <types><members>Course_Batch__c.Finalize_Batch</members><name>QuickAction</name></types>
   <types><members>*</members><name>FlexiPage</name></types>
   <types><members>*</members><name>Network</name></types>
   <types><members>*</members><name>CustomSite</name></types>

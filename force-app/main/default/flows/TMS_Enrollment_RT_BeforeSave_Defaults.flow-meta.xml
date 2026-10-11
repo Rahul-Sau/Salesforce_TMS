@@ -3,6 +3,26 @@
     <apiVersion>67.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
     <assignments>
+        <name>Set_completed</name>
+        <label>Set completed</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Completed</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Completion_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
         <name>Set_decision_date</name>
         <label>Set decision date</label>
         <locationX>0</locationX>
@@ -14,6 +34,9 @@
                 <elementReference>$Flow.CurrentDateTime</elementReference>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>Ready_to_complete</targetReference>
+        </connector>
     </assignments>
     <assignments>
         <name>Set_defaults</name>
@@ -35,11 +58,34 @@
             </value>
         </assignmentItems>
     </assignments>
+    <assignments>
+        <name>Set_failed</name>
+        <label>Set failed</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Failed</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>$Record.Completion_Date__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
     <decisions>
         <name>Final_status_set</name>
         <label>Final status set?</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Ready_to_complete</targetReference>
+        </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Decided</name>
@@ -103,11 +149,91 @@
             <label>Created</label>
         </rules>
     </decisions>
+    <decisions>
+        <name>Passed_decision</name>
+        <label>Passed</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Set_failed</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not passed</defaultConnectorLabel>
+        <rules>
+            <name>Passed_yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>fxPassed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_completed</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Ready_to_complete</name>
+        <label>Ready to complete?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Ready_yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Approved</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Closed_Count__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.Submission_Count__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Submission_Count__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Course_Batch__r.Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>In Progress</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Course_Batch__r.Total_Weightage__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <numberValue>100.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Passed_decision</targetReference>
+            </connector>
+            <label>Ready</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <formulas>
         <name>fxEnrollmentKey</name>
         <dataType>String</dataType>
         <expression>{!$Record.Trainee__c} &amp; &apos;-&apos; &amp; {!$Record.Course_Batch__c}</expression>
+    </formulas>
+    <formulas>
+        <name>fxPassed</name>
+        <dataType>Boolean</dataType>
+        <expression>BLANKVALUE({!$Record.Total_Score__c},0) &gt;= BLANKVALUE({!$Record.Course_Batch__r.Course__r.Pass_Mark__c},0)</expression>
     </formulas>
     <interviewLabel>TMS_Enrollment_RT_BeforeSave_Defaults {!$Flow.CurrentDateTime}</interviewLabel>
     <label>TMS_Enrollment_RT_BeforeSave_Defaults</label>

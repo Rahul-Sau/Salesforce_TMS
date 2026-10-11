@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "27db18a4-9037-4ee9-a01a-1ccf7e0b5a31",
+  "appPageId" : "b0129135-173a-4792-b117-8d3cfc066708",
+  "configurationTags" : [ ],
+  "devName" : "Certificate_List__c",
+  "id" : "6834f532-11a3-42c7-a500-91862b9f8814",
+  "label" : "Certificate List",
+  "objectApiName" : "Certificate__c",
+  "routeType" : "list-a05",
+  "type" : "route",
+  "urlPrefix" : "certificate"
+}

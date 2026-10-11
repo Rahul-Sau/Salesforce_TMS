@@ -86,6 +86,10 @@
                 <behavior>Readonly</behavior>
                 <field>Assessment_Instructions__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Batch_Id__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>

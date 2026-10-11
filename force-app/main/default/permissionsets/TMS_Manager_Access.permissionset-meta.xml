@@ -4,9 +4,17 @@
         <application>Training_Management</application>
         <visible>true</visible>
     </applicationVisibilities>
+    <classAccesses>
+        <apexClass>TMS_CertificateInvocable</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <customPermissions>
         <enabled>true</enabled>
         <name>TMS_Approve_Enrollment</name>
+    </customPermissions>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>TMS_Bypass_Validation</name>
     </customPermissions>
     <customPermissions>
         <enabled>true</enabled>
