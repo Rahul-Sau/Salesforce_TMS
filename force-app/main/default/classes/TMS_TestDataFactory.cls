@@ -1,3 +1,4 @@
+/** Builds batches, trainees and enrollments for tests. */
 @isTest
 public class TMS_TestDataFactory {
     private static Integer seq = 0;

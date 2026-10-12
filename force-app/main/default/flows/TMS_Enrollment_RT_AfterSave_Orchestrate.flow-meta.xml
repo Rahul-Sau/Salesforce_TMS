@@ -24,6 +24,13 @@
             </value>
         </inputParameters>
         <inputParameters>
+            <name>senderAddress</name>
+            <value>
+                <inputConfiguratorMode>Custom</inputConfiguratorMode>
+                <stringValue>rahulshaw2203@gmail.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
             <name>composeEmailContent</name>
             <value>
                 <stringValue>True</stringValue>

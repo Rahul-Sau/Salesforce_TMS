@@ -48,4 +48,16 @@ private class TMS_SeatAllocationService_Test {
         Assert.areEqual(1, [SELECT COUNT() FROM Enrollment__c WHERE Status__c = 'Approved'], 'One seat');
         Assert.areEqual(1, [SELECT COUNT() FROM Enrollment__c WHERE Status__c = 'Waitlisted'], 'One waitlisted');
     }
+    @isTest static void deleteReleasesSeat() {
+    Course_Batch__c b = TMS_TestDataFactory.createBatch(2);
+    List<Enrollment__c> es = TMS_TestDataFactory.createEnrollments(
+        b.Id, TMS_TestDataFactory.createTrainees(2), 'Under Review');
+    for (Enrollment__c e : es) { e.Status__c = 'Approved'; }
+    update es;
+    Assert.areEqual(2, [SELECT Seats_Taken__c FROM Course_Batch__c WHERE Id = :b.Id].Seats_Taken__c, 'Two seats taken');
+    Test.startTest();
+    delete es[0];
+    Test.stopTest();
+    Assert.areEqual(1, [SELECT Seats_Taken__c FROM Course_Batch__c WHERE Id = :b.Id].Seats_Taken__c, 'Delete releases the seat');
+}    
 }

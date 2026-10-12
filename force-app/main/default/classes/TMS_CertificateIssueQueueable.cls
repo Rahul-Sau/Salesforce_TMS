@@ -1,3 +1,4 @@
+/** Background job: calls the QR service, stores the result and writes an Integration Log. */
 public without sharing class TMS_CertificateIssueQueueable implements Queueable, Database.AllowsCallouts {
     private static final String QR_PATH = '/v1/create-qr-code/?size=200x200&data=';
     private List<Id> certIds;

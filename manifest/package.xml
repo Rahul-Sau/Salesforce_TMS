@@ -16,6 +16,10 @@
     <members>TMS_CertificateIssueQueueable</members>
     <members>TMS_CertificateInvocable</members>
     <members>TMS_CertificateIssueQueueable_Test</members>
+    <members>TMS_CertificateInvocable_Test</members>
+    <members>TMS_CertificateExpiryBatch</members>
+    <members>TMS_CertificateExpiryScheduler</members>
+    <members>TMS_CertificateExpiryBatch_Test</members>
     <name>ApexClass</name>
   </types>
   <types><members>TMS_EnrollmentTrigger</members><name>ApexTrigger</name></types>

@@ -161,7 +161,23 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>TMS_CertificateExpiryBatch</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TMS_CertificateExpiryBatch_Test</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TMS_CertificateExpiryScheduler</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>TMS_CertificateInvocable</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TMS_CertificateInvocable_Test</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>

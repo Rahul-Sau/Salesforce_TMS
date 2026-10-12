@@ -1,3 +1,4 @@
+/** Shared constants, including the statuses that hold a seat. */
 public with sharing class TMS_Constants {
     public static final String APPROVED = 'Approved';
     public static final String WAITLISTED = 'Waitlisted';

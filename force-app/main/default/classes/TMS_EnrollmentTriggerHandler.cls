@@ -1,3 +1,4 @@
+/** Routes Enrollment trigger events to the seat service. */
 public without sharing class TMS_EnrollmentTriggerHandler {
     public static void run() {
         if (Trigger.isBefore) {
