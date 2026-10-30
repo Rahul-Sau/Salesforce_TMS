@@ -1,0 +1,22 @@
+<template>
+    <div class="slds-box slds-theme_default slds-m-around_medium" style="max-width: 480px;">
+        <h2 class="slds-text-heading_medium slds-m-bottom_small">Verify a certificate</h2>
+        <lightning-input label="Verification code" value={code} onchange={handleChange} max-length="12"></lightning-input>
+        <lightning-button class="slds-m-top_small" variant="brand" label="Verify" onclick={handleClick}></lightning-button>
+        <template if:true={loading}>
+            <lightning-spinner alternative-text="Checking" size="small"></lightning-spinner>
+        </template>
+        <template if:true={found}>
+            <div class="slds-m-top_medium">
+                <p><strong>Valid certificate</strong></p>
+                <p>Holder: {result.holder}</p>
+                <p>Course: {result.course}</p>
+                <p>Status: {result.status}</p>
+                <p>Issued: {result.issueDate}</p>
+            </div>
+        </template>
+        <template if:true={notFound}>
+            <p class="slds-m-top_medium slds-text-color_error">No certificate found for this code.</p>
+        </template>
+    </div>
+</template>

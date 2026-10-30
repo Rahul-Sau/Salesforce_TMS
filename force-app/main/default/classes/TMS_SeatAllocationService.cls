@@ -1,3 +1,4 @@
+/** Counts seats, decides Approved or Waitlisted under a row lock, and writes Seats Taken. */
 public without sharing class TMS_SeatAllocationService {
 
     // How many seats are in use per batch.

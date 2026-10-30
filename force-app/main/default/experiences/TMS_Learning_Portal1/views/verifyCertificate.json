@@ -1,0 +1,46 @@
+{
+  "appPageId" : "b0129135-173a-4792-b117-8d3cfc066708",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "dataProviders" : [ ],
+  "id" : "3b473580-ed83-42b4-a1c7-bc441f685d03",
+  "label" : "Verify Certificate",
+  "regions" : [ {
+    "id" : "506bc62e-42cc-4ab6-bb57-b7bc4e9df87b",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : { },
+      "componentName" : "c:tmsVerifyCertificate",
+      "id" : "ac822a42-6cd2-46ad-ba24-141c6046b4cc",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "27209cf4-c590-4eef-a124-8e3de785b4af",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "deca320d-ea7e-410a-846c-a9a4877d771c",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Verify Certificate"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "c673532b-55aa-4e78-bef3-ed75bd58de1f",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e51c785f-081c-4f0b-8473-39b6b0901fbe",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-verify"
+}

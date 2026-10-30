@@ -67,6 +67,14 @@
                 <behavior>Readonly</behavior>
                 <field>QR_Image__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>LinkedIn_Add_Link__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>LinkedIn_Share_Link__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

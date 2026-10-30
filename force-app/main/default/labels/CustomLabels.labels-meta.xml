@@ -5,7 +5,7 @@
         <language>en_US</language>
         <protected>true</protected>
         <shortDescription>TMS Verify Base URL</shortDescription>
-        <value>https://orgfarm-989d5e8fbb-dev-ed.develop.my.site.com/tmslearningportal/s/?code=</value>
+        <value>https://orgfarm-989d5e8fbb-dev-ed.develop.my.site.com/tmslearningportal/s/verify?code=</value>
     </labels>
     <labels>
         <fullName>TMS_Admin_Email</fullName>

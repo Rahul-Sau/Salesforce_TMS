@@ -1,0 +1,12 @@
+{
+  "activeViewId" : "3b473580-ed83-42b4-a1c7-bc441f685d03",
+  "appPageId" : "b0129135-173a-4792-b117-8d3cfc066708",
+  "configurationTags" : [ ],
+  "devName" : "Verify_Certificate__c",
+  "id" : "d70d359a-ca04-4393-b1fc-0e5f9291b97d",
+  "label" : "Verify Certificate",
+  "pageAccess" : "Public",
+  "routeType" : "custom-verify",
+  "type" : "route",
+  "urlPrefix" : "verify"
+}

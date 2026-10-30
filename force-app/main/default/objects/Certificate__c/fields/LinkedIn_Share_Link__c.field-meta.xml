@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LinkedIn_Share_Link__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Verification_URL__c), &quot;Verification pending&quot;,
+HYPERLINK(&quot;https://www.linkedin.com/sharing/share-offsite/?url=&quot;
+  &amp; SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Verification_URL__c, &quot;:&quot;, &quot;%3A&quot;), &quot;/&quot;, &quot;%2F&quot;), &quot;?&quot;, &quot;%3F&quot;), &quot;=&quot;, &quot;%3D&quot;),
+  &quot;Share on LinkedIn&quot;, &quot;_blank&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Share on LinkedIn</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

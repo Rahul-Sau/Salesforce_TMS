@@ -85,5 +85,13 @@
   <types><members>Enrollment__c.TMS_Enrollment_Approval</members><name>ApprovalProcess</name></types>
   <types><members>Enrollment__c.*</members><name>WorkflowFieldUpdate</name></types>
   <types><members>*</members><name>PathAssistant</name></types>
+    <types>
+    <members>TMS_AGT_Batch_Snapshot</members>
+    <members>TMS_AGT_Open_Batches</members>
+    <members>TMS_AGT_Trainee_Progress</members>
+    <members>TMS_User_RT_AfterSave_Onboard</members>
+    <name>Flow</name>
+  </types>
+  <types><members>*</members><name>LightningComponentBundle</name></types>
   <version>67.0</version>
 </Package>

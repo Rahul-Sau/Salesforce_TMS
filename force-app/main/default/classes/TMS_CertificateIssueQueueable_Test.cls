@@ -62,4 +62,28 @@ private class TMS_CertificateIssueQueueable_Test {
     Assert.areEqual('Verified', [SELECT Verification_Status__c FROM Certificate__c WHERE Id = :c.Id].Verification_Status__c,
         'Certificate stays Verified');
 }
+    @isTest static void oneJobHandlesOnlyTheChunkSize() {
+    Test.setMock(HttpCalloutMock.class, new Mock(200));
+    Course_Batch__c b = TMS_TestDataFactory.createBatch(20);
+    List<Contact> trainees = TMS_TestDataFactory.createTrainees(12);
+    List<Enrollment__c> es = TMS_TestDataFactory.createEnrollments(b.Id, trainees, 'Under Review');
+    List<Certificate__c> certs = new List<Certificate__c>();
+    for (Integer i = 0; i < 12; i++) {
+        // 'Skipped' first, so the certificate flow's own job does nothing.
+        certs.add(new Certificate__c(Enrollment__c = es[i].Id, Trainee__c = trainees[i].Id, Course__c = b.Course__c,
+            Certificate_Key__c = es[i].Id, Status__c = 'Issued', Issue_Date__c = Date.today(),
+            Verification_Status__c = 'Skipped'));
+    }
+    insert certs;
+    for (Certificate__c c : certs) { c.Verification_Status__c = 'Not Verified'; }
+    update certs;
+    List<Id> ids = new List<Id>(new Map<Id, Certificate__c>(certs).keySet());
+    Test.startTest();
+    System.enqueueJob(new TMS_CertificateIssueQueueable(ids));
+    Test.stopTest();
+    Assert.areEqual(10, [SELECT COUNT() FROM Certificate__c WHERE Id IN :ids AND Verification_Status__c = 'Verified'],
+        'One job verifies exactly the chunk size');
+    Assert.areEqual(2, [SELECT COUNT() FROM Certificate__c WHERE Id IN :ids AND Verification_Status__c = 'Not Verified'],
+        'The remainder waits for the next job');
+}
 }
